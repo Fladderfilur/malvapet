@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+      --navlink-height: 4.8rem;
+      --navlink-total-height: 9.6rem;
+    }
+}
+@layer base {
+    html {
+        @apply bg-background font-sans;
+        font-size: 62.5%;
+    }
+}
+
+@layer components {
+    .navLink{
+        @apply hover:underline decoration-btn-purple text-center decoration-2 active:underline underline-offset-8 rounded-full p-4 cursor-pointer hover:font-bold uppercase hover:scale-110 transition-transform duration-200 ease-out;
+    }
+}
+
+@layer utilities {
+    .text-shadow {
+      text-shadow: rgb(0 0 0 / 56%) 0px 3px 12px;
+    }
+    .mask-img-top {
+        mask-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.57) 33.98%, black 100%);
+      }
+      .mask-img-bottom {
+        mask-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 11%, black 46%);
+      }
+    .text-gradient {
+        background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(233, 108, 250, 0.38));
+        background-clip: text;
+        color: transparent;
+    }
+    .mask-radial-faded {
+        mask-image: radial-gradient(circle at center center, black, transparent 75%)
+      }
+}
